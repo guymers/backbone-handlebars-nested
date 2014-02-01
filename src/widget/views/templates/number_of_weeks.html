@@ -1,0 +1,8 @@
+<div class="number-of-weeks">
+	{{#each weeks}}
+		<div>
+			<a href="" class="week-select {{#ifEquals this ../week}}selected{{/ifEquals}}" data-week="{{this}}">{{this}} Weeks</a>
+			<br/>
+		</div>
+	{{/each}}
+</div>

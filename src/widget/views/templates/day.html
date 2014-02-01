@@ -1,0 +1,9 @@
+<div class="days">
+	{{#each days}}
+		<div>
+			<label for="day_{{this}}">{{this}}</label>
+			<input type="radio" id="day_{{this}}" class="day-select" name="day" value="{{this}}" {{#ifEquals this ../day}}checked="checked"{{/ifEquals}} />
+			<br/>
+		</div>
+	{{/each}}
+</div>
