@@ -24,7 +24,13 @@
 
 	"globals": {
 		"module": true,
+
 		"define": true,
-		"require": true
+		"require": true,
+		"requirejs": true,
+
+		"describe": true,
+		"it": true,
+		"expect": true
 	}
 }

@@ -5,3 +5,6 @@ Dependencies
 
 Build javascript
 `grunt build`
+
+TODO
+try karma-webdriver-launcher
