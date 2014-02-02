@@ -6,6 +6,7 @@
     "grunt": "~0.4.2",
     "grunt-contrib-jshint": "~0.8.0",
     "grunt-jsvalidate": "~0.2.2",
+    "grunt-jscs-checker": "~0.3.2",
     "grunt-contrib-requirejs": "~0.4.1",
     "grunt-dom-munger": "~3.1.0",
     "grunt-karma": "~0.6.2",

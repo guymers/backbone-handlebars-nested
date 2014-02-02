@@ -3,20 +3,18 @@ module.exports = {
 		globals: {},
 		esprimaOptions: {},
 		verbose: false
-	},
-	gruntfiles: {
-		files: {
-			src: ["<%=jshint.gruntfiles.src%>"]
-		}
-	},
-	sourcefiles: {
-		files: {
-			src: ["<%=jshint.sourcefiles.src%>"]
-		}
-	},
-	testfiles: {
-		files: {
-			src: ["<%=jshint.testfiles.src%>"]
-		}
 	}
 };
+
+var grunt = require("grunt");
+var files = grunt.config.get("files");
+
+Object.keys(files).forEach(function(key) {
+	"use strict";
+
+	module.exports[key] = {
+		files: {
+			src: files[key]
+		}
+	};
+});

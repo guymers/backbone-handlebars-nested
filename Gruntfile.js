@@ -1,6 +1,13 @@
 module.exports = function(grunt) {
 	"use strict";
 
+	var files = {
+		config: ["Gruntfile.js", "grunt/**/*.js", "karma.conf.js"],
+		source: ["src/**/*.js"],
+		test: ["test/**/*.js"]
+	};
+	grunt.config.set("files", files);
+
 	var configDir = "./grunt/config/";
 	var packageJson = grunt.file.readJSON("package.json");
 
@@ -30,7 +37,7 @@ module.exports = function(grunt) {
 			grunt.loadNpmTasks(devDependency);
 		});
 
-	grunt.registerTask("check", ["jshint", "jsvalidate"]);
+	grunt.registerTask("check", ["jshint", "jsvalidate", "jscs"]);
 	grunt.registerTask("build", ["requirejs", "dom_munger"]);
 	grunt.registerTask("test", ["karma:test"]);
 };

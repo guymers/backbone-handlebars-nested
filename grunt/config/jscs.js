@@ -1,6 +1,6 @@
 module.exports = {
 	options: {
-		jshintrc: ".jshintrc"
+		config: ".jscs.json"
 	}
 };
 
@@ -11,6 +11,8 @@ Object.keys(files).forEach(function(key) {
 	"use strict";
 
 	module.exports[key] = {
-		src: files[key]
+		files: {
+			src: files[key]
+		}
 	};
 });
