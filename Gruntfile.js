@@ -26,16 +26,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig(config);
 
-	Object.keys(packageJson.devDependencies)
-		.filter(function(devDependency) {
-			return devDependency.indexOf("grunt-") === 0;
-		})
-		.filter(function(devDependency) {
-			return devDependency !== "grunt-cli";
-		})
-		.forEach(function(devDependency) {
-			grunt.loadNpmTasks(devDependency);
-		});
+	require("load-grunt-tasks")(grunt);
 
 	grunt.registerTask("check", ["jshint", "jsvalidate", "jscs"]);
 	grunt.registerTask("build", ["requirejs", "dom_munger"]);
